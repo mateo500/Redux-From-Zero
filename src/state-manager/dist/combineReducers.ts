@@ -9,7 +9,7 @@ export const combineReducers = (reducers: Record<string, any>) => {
     }
   });
 
-  const reducerFunctionsKeys = Object.keys(reducerFunctions);
+  const reducerFunctionsKeys: Array<string> = Object.keys(reducerFunctions);
 
   return (state: Record<string, any> = {}, action: any) => {
     reducerFunctionsKeys.forEach((reducerKey: string) => {

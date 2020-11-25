@@ -5,7 +5,7 @@ export const createStore = (
   ) => Record<string, any>
 ) => {
   let state: any;
-  let listeners: Array<(state: any) => void> = [];
+  const listeners: Array<(state: any) => void> = [];
 
   const getState = (): any => state;
 
@@ -18,7 +18,7 @@ export const createStore = (
     listeners.push(listener);
   };
 
-  dispatch({type: '@@@INIT'});
+  dispatch({ type: "@@@INIT" });
 
   return { getState, dispatch, subscribe };
 };
