@@ -18,7 +18,7 @@ export const createStore = (
     listeners.push(listener);
   };
 
-  dispatch({});
+  dispatch({type: '@@@INIT'});
 
   return { getState, dispatch, subscribe };
 };
