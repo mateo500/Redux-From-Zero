@@ -17,7 +17,9 @@ export const createStore = (
   const subscribe = (listener: (state: any) => void): void => {
     listeners.push(listener);
   };
-
+  
+  
+  //mandatory dispatch to populate the state tree
   dispatch({ type: "@@@INIT" });
 
   return { getState, dispatch, subscribe };
