@@ -1,8 +1,8 @@
 export const createStore = (
   rootReducer: (
-    state: Record<string, any>,
+    state: any,
     action: { type: string }
-  ) => Record<string, any>
+  ) => any
 ) => {
   let state: any;
   const listeners: Array<(state: any) => void> = [];
